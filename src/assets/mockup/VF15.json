@@ -1,0 +1,22 @@
+[
+    {
+        "codigo": 1,
+        "descripcion": "Embestido"
+    },
+    {
+        "codigo": 2,
+        "descripcion": "Embistente"
+    },
+    {
+        "codigo": 3,
+        "descripcion": "En cadena embestido"
+    },
+    {
+        "codigo": 4,
+        "descripcion": "En cadena embistente"
+    },
+    {
+        "codigo": 5,
+        "descripcion": "En cadena ambos"
+    }
+]

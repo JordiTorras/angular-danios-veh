@@ -1,0 +1,40 @@
+{
+    "codigo_lista_secciones": "COCHE",
+    "secciones": [
+        {
+            "codigo": "PARTE_FRONTAL",
+            "orden": 1,
+            "descripcion": "Parte frontal",
+            "classificacion": "DANIO_PARCIAL",
+            "ind_gravedad_danyo": true
+        },
+        {
+            "codigo": "CAPOT",
+            "orden": 2,
+            "descripcion": "Capot",
+            "classificacion": "DANIO_PARCIAL",
+            "ind_gravedad_danyo": true
+        },
+        {
+            "codigo": "LATERAL DELANTERO IZQUIERDO",
+            "orden": 3,
+            "descripcion": "Lateral Delantero Izquierdo",
+            "classificacion": "DANIO_PARCIAL",
+            "ind_gravedad_danyo": true
+        },
+        {
+            "codigo": "PARABRISAS",
+            "orden": 100,
+            "descripcion": "Parabrisas",
+            "classificacion": "DANIO_MENOR",
+            "ind_gravedad_danyo": false
+        },
+        {
+            "codigo": "LUNETA",
+            "orden": 111,
+            "descripcion": "Luneta",
+            "classificacion": "DANIO_MENOR",
+            "ind_gravedad_danyo": false
+        }
+    ]
+}

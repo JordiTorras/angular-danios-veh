@@ -1,0 +1,26 @@
+<p>ita-danyos-vehiculo works!</p>
+
+<!-- Lista de secciones dañadas -->
+<div class="lista-secciones">
+  <div *ngFor="let item of listaSecciones.secciones">
+    <label
+      ><input
+        type="checkbox"
+        id="check_{{ item.codigo }}"
+        checked="{{ item.seleccionado }}"
+      />
+      {{ item.descripcion }}</label
+    >
+  </div>
+</div>
+
+<div>
+  <select name="categoriaTr">
+    <option>Coche</option>
+    <option>Avión</option>
+    <option>Tren</option>
+  </select>
+</div>
+<div>
+  <input [value]="descripcionDanyos" />
+</div>
