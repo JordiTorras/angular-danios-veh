@@ -1,0 +1,18 @@
+[
+    {
+        "codigo": 0,
+        "descripcion": "Sin daños"
+    },
+    {
+        "codigo": 1,
+        "descripcion": "Daños leves"
+    },
+    {
+        "codigo": 2,
+        "descripcion": "Daños medios"
+    },
+    {
+        "codigo": 3,
+        "descripcion": "Daños graves"
+    }
+]

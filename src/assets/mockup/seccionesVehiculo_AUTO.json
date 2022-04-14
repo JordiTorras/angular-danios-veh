@@ -6,35 +6,35 @@
             "orden": 1,
             "descripcion": "Parte frontal",
             "classificacion": "DANIO_PARCIAL",
-            "ind_gravedad_danyo": true
+            "boolGravedadDanyo": true
         },
         {
             "codigo": "CAPOT",
             "orden": 2,
             "descripcion": "Capot",
             "classificacion": "DANIO_PARCIAL",
-            "ind_gravedad_danyo": true
+            "boolGravedadDanyo": true
         },
         {
-            "codigo": "LATERAL DELANTERO IZQUIERDO",
+            "codigo": "LATERAL_DELANTERO_ZQUIERDO",
             "orden": 3,
             "descripcion": "Lateral Delantero Izquierdo",
             "classificacion": "DANIO_PARCIAL",
-            "ind_gravedad_danyo": true
+            "boolGravedadDanyo": true
         },
         {
             "codigo": "PARABRISAS",
             "orden": 100,
             "descripcion": "Parabrisas",
             "classificacion": "DANIO_MENOR",
-            "ind_gravedad_danyo": false
+            "boolGravedadDanyo": false
         },
         {
             "codigo": "LUNETA",
             "orden": 111,
             "descripcion": "Luneta",
             "classificacion": "DANIO_MENOR",
-            "ind_gravedad_danyo": false
+            "boolGravedadDanyo": false
         }
     ]
 }

@@ -5,7 +5,7 @@ export interface Seccion {
   classificacion: string;
   boolGravedadDanyo: boolean;
   seleccionado: boolean;
-  nivelDanyos: number;
+  nivelDanyos: number | null;
 }
 
 export interface SeccionesVehiculoResponse {
@@ -13,7 +13,9 @@ export interface SeccionesVehiculoResponse {
   secciones: Seccion[];
 }
 
-export interface SeccionesVehiculo {
-  codigoListaSecciones: string;
-  secciones: Seccion[];
+export interface DanyosVehiculo {
+  codModeloDanyos: string | null;
+  seccionesDanyadas: Seccion[];
+  codCaracterParticipacion: string | null;
+  descripcionLibre: string | null;
 }

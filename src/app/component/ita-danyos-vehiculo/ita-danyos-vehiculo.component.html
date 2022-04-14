@@ -1,26 +1,56 @@
-<p>ita-danyos-vehiculo works!</p>
-
 <!-- Lista de secciones dañadas -->
-<div class="lista-secciones">
-  <div *ngFor="let item of listaSecciones.secciones">
-    <label
-      ><input
-        type="checkbox"
-        id="check_{{ item.codigo }}"
-        checked="{{ item.seleccionado }}"
-      />
-      {{ item.descripcion }}</label
-    >
+
+<div class="tresColumnas">
+  <div *ngFor="let item of danyosVehiculo.seccionesDanyadas">
+    <span [ngSwitch]="item.boolGravedadDanyo">
+      <!-- Lista par seleccionar el nivel de daño de la sección -->
+      <div *ngSwitchCase="true">
+        {{ item.descripcion }} <br />
+        <select
+          id="sel-{{ item.codigo }}"
+          [(ngModel)]="item.nivelDanyos"
+          (change)="onChangeNivelDanyos($event)"
+        >
+          <option *ngFor="let item of VF14" [value]="item.codigo">
+            {{ item.descripcion }}
+          </option>
+        </select>
+      </div>
+      <!-- Checkbox para marcar unicamente Si o No la seccion esta dañada -->
+      <div *ngSwitchDefault>
+        <label
+          ><input
+            type="checkbox"
+            id="check-{{ item.codigo }}"
+            [(ngModel)]="item.seleccionado"
+          />
+          {{ item.descripcion }}</label
+        >
+      </div>
+    </span>
   </div>
 </div>
 
+<!-- Contro de los datos introducidos-->
 <div>
-  <select name="categoriaTr">
-    <option>Coche</option>
-    <option>Avión</option>
-    <option>Tren</option>
+  <label for="sel-caracter-participacion"
+    >Caracter participación en el siniestro:</label
+  >
+  <select
+    id="sel-caracter-participacion"
+    [(ngModel)]="danyosVehiculo.codCaracterParticipacion"
+  >
+    <option *ngFor="let item of VF15" [value]="item.codigo">
+      {{ item.descripcion }}
+    </option>
   </select>
 </div>
 <div>
-  <input [value]="descripcionDanyos" />
+  <input [(ngModel)]="danyosVehiculo.descripcionLibre" />
 </div>
+
+<!-- Contro de los datos introducidos-->
+<hr />
+<pre
+  >{{ danyosVehiculo | json }} 
+</pre>

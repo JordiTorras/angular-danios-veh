@@ -1,15 +1,8 @@
 import { Injectable } from '@angular/core';
-import {
-  HttpClient,
-  HttpHeaders,
-  HttpParams,
-  HttpParamsOptions,
-} from '@angular/common/http';
-import {
-  SeccionesVehiculoResponse,
-  SeccionesVehiculo,
-} from '../class/seccionesVehiculo';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { SeccionesVehiculoResponse } from '../class/seccionesVehiculo';
 import { Observable } from 'rxjs';
+import { detValorResponse } from '../class/detValores';
 
 @Injectable({
   providedIn: 'root',
@@ -32,5 +25,18 @@ export class DanyosVehiculoService {
     };
 
     return this._http.get<SeccionesVehiculoResponse>(httpUrl, httpOptions);
+  }
+
+  /**
+   * Recuper la lista del Catalogo de Valores
+   */
+  getDetValores(codDvalor: string): Observable<detValorResponse[]> {
+    const httpUrl = 'assets/mockup/VF' + codDvalor + '.json';
+    const httpOptions = {
+      headers: new HttpHeaders(),
+      params: new HttpParams(),
+    };
+
+    return this._http.get<detValorResponse[]>(httpUrl, httpOptions);
   }
 }
