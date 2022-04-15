@@ -1,0 +1,19 @@
+{{ urlImagen }}
+
+<img
+  id="imagen_vehiculo"
+  style="width: 500px"
+  [src]="urlImagen"
+  usemap="#auto_map"
+/>
+
+<map id="auto_map" name="auto_map">
+  <area
+    *ngFor="let item of lstPartesVehiculo"
+    id="area-{{ item.codigo }}"
+    shape="poly"
+    [coords]="item.coords"
+    [alt]="item.descripcion"
+    href="#"
+  />
+</map>

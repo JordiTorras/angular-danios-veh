@@ -14,8 +14,8 @@ export interface SeccionesVehiculoResponse {
 }
 
 export interface DanyosVehiculo {
-  codModeloDanyos: string | null;
-  seccionesDanyadas: Seccion[];
+  codModeloDanyos: string;
+  lstSeccionesDanyadas: Seccion[];
   codCaracterParticipacion: string | null;
-  descripcionLibre: string | null;
+  desDanyosLibre: string | null;
 }

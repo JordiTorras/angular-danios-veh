@@ -1,7 +1,7 @@
 <!-- Lista de secciones dañadas -->
 
 <div class="tresColumnas">
-  <div *ngFor="let item of danyosVehiculo.seccionesDanyadas">
+  <div *ngFor="let item of danyosVehiculo.lstSeccionesDanyadas">
     <span [ngSwitch]="item.boolGravedadDanyo">
       <!-- Lista par seleccionar el nivel de daño de la sección -->
       <div *ngSwitchCase="true">
@@ -40,13 +40,14 @@
     id="sel-caracter-participacion"
     [(ngModel)]="danyosVehiculo.codCaracterParticipacion"
   >
+    <option disabled value="">Seleccionar</option>
     <option *ngFor="let item of VF15" [value]="item.codigo">
       {{ item.descripcion }}
     </option>
   </select>
 </div>
 <div>
-  <input [(ngModel)]="danyosVehiculo.descripcionLibre" />
+  <input [(ngModel)]="danyosVehiculo.desDanyosLibre" />
 </div>
 
 <!-- Contro de los datos introducidos-->
