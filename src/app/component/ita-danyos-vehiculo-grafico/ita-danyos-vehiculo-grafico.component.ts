@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { detValorResponse } from '../ita-danyos-vehiculo/class/detValores';
-import { Seccion } from '../ita-danyos-vehiculo/class/seccionesVehiculo';
+import { SeccionVehiculo } from '../ita-danyos-vehiculo/class/seccionesVehiculo';
 import { PartesVehiculoResponse, ParteVehiculo } from './class/partesVehiculo';
 import { DanyosVehiculoGraficoService } from './services/danyos-vehiculo-grafico.service';
 
@@ -12,9 +12,10 @@ import { DanyosVehiculoGraficoService } from './services/danyos-vehiculo-grafico
 export class ItaDanyosVehiculoGraficoComponent implements OnInit {
   @Input() tipoVehiculo: string = '';
   @Input() codModeloDanyos: string = '';
-  @Input() seccionesDanyadas: Seccion[] = [];
 
-  public lstPartesVehiculo: ParteVehiculo[] = [];
+  public lstSeccionesDanyadas: SeccionVehiculo[] = [];
+
+  public lstPartesVehiculo: ParteVehiculo[] = []; //lista de partes de la imagen
 
   public VF14: detValorResponse[] = []; // Nivel de daños sufridos en la secció del vehículo
 
@@ -28,7 +29,6 @@ export class ItaDanyosVehiculoGraficoComponent implements OnInit {
     this._danyosService
       .getListaSeccionesImagen(this.tipoVehiculo)
       .subscribe((resp: ParteVehiculo[]) => {
-        console.log(resp);
         this.lstPartesVehiculo = resp.map((parte: ParteVehiculo) => {
           return {
             codigo: parte.codigo,
@@ -36,7 +36,6 @@ export class ItaDanyosVehiculoGraficoComponent implements OnInit {
             coords: parte.coords,
           };
         });
-
         console.log(this.lstPartesVehiculo);
       });
 
@@ -49,4 +48,11 @@ export class ItaDanyosVehiculoGraficoComponent implements OnInit {
   }
 
   ngOnchange(): void {}
+
+  onClickSeccion(event: any) {
+    //obtenemos el id de la sección seleccionada
+    console.log(event.target.id);
+
+    //
+  }
 }

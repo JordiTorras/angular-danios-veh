@@ -1,4 +1,4 @@
-export interface Seccion {
+export interface SeccionVehiculo {
   codigo: string;
   orden: number;
   descripcion: string;
@@ -10,12 +10,12 @@ export interface Seccion {
 
 export interface SeccionesVehiculoResponse {
   codigoListaSecciones: string;
-  secciones: Seccion[];
+  secciones: SeccionVehiculo[];
 }
 
 export interface DanyosVehiculo {
   codModeloDanyos: string;
-  lstSeccionesDanyadas: Seccion[];
+  lstSeccionesDanyadas: SeccionVehiculo[];
   codCaracterParticipacion: string | null;
   desDanyosLibre: string | null;
 }

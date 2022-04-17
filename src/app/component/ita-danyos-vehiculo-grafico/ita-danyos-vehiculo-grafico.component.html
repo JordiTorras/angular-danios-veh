@@ -1,19 +1,20 @@
-{{ urlImagen }}
+<div class="mapdiv" style="background-image: url('{{ urlImagen }}')">
+  <svg width="500" height="300">
+    <a
+      *ngFor="let item of lstPartesVehiculo"
+      [attr.xlink:title]="item.descripcion"
+      xlink:href="#"
+    >
+      <path
+        id="{{ item.codigo }}"
+        [attr.d]="'M' + item.coords + 'Z'"
+        [ngClass]="{ danyosLeves: 1 === 1 }"
+        (click)="onClickSeccion($event)"
+      ></path>
+    </a>
+  </svg>
+</div>
 
-<img
-  id="imagen_vehiculo"
-  style="width: 500px"
-  [src]="urlImagen"
-  usemap="#auto_map"
-/>
-
-<map id="auto_map" name="auto_map">
-  <area
-    *ngFor="let item of lstPartesVehiculo"
-    id="area-{{ item.codigo }}"
-    shape="poly"
-    [coords]="item.coords"
-    [alt]="item.descripcion"
-    href="#"
-  />
-</map>
+<pre
+  >{{ lstSeccionesDanyadas | json }} 
+</pre>

@@ -2,7 +2,7 @@ import { Component, Input, OnInit, SecurityContext } from '@angular/core';
 import { detValorResponse } from './class/detValores';
 import {
   DanyosVehiculo,
-  Seccion,
+  SeccionVehiculo,
   SeccionesVehiculoResponse,
 } from './class/seccionesVehiculo';
 import { DanyosVehiculoService } from './services/danyos-vehiculo.service';
@@ -50,7 +50,7 @@ export class ItaDanyosVehiculoComponent implements OnInit {
 
         // Ordenamos las piezas del vehiculo por el campo "orden"
         this.danyosVehiculo.lstSeccionesDanyadas.sort(
-          (a: Seccion, b: Seccion) =>
+          (a: SeccionVehiculo, b: SeccionVehiculo) =>
             a.orden < b.orden ? -1 : a.orden > b.orden ? 1 : 0
         );
 
