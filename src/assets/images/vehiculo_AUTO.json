@@ -1,22 +1,72 @@
 [
     {
+        "codigo": "PARTE_FRONTAL",
+        "descripcion": "Parte frontal",
+        "coords": "46,42,23,49,7,71,3,109,3,174,7,212,16,235,45,249,49,243,30,230,14,183,12,156,11,120,18,93,26,65"
+    },
+    {
         "codigo": "CAPOT",
-        "descripcion": "Tapa motor",
-        "coords": "143,55,28,60,12,116,10,176,28,229,143,238,127,197,123,109"
-    },
-    {
-        "codigo": "PARABRISAS",
-        "descripcion": "Luna delantera",
-        "coords": "154,56,138,83,132,123,132,175,141,208,154,236,179,234,222,216,214,179,214,127,219,73,187,61"
-    },
-    {
-        "codigo": "PARTE_TRASERA",
-        "descripcion": "Puerta trasera",
-        "coords": "434,42,425,66,445,90,444,145,442,200,432,226,436,248,484,244,499,189,499,104,491,55"
+        "descripcion": "Capot",
+        "coords": "29,61,146,55,134,74,124,128,124,175,133,217,145,238,29,233,14,186,11,112"
     },
     {
         "codigo": "LATERAL_DELANTERO_IZQUIERDO",
         "descripcion": "Lateral delantero izquierdo",
-        "coords": "28,229,148,237,165,238,168,255,74,254,46,250"
+        "coords": "39,235,49,242,50,253,169,255,169,239"
+    },
+    {
+        "codigo": "LATERAL_DELANTERO_DERECHO",
+        "descripcion": "Lateral delantero derecho",
+        "coords": "33,61,41,47,45,39,171,36,168,52"
+    },
+    {
+        "codigo": "PUERTA_DELANTERA_IZQUIERDA",
+        "descripcion": "Puerta delantera izquierda",
+        "coords": "170,254,171,239,232,213,285,208,271,256"
+    },
+    {
+        "codigo": "PUERTA_DELANTERA_DERECHA",
+        "descripcion": "",
+        "coords": "172,36,273,37,283,87,231,80,170,54"
+    },
+    {
+        "codigo": "PUERTA_TRASERA_IZQUIERDA",
+        "descripcion": "Puerta trasera izquierda",
+        "coords": "282,208,334,207,363,241,366,253,268,256"
+    },
+    {
+        "codigo": "PUERTA_TRASERA_DERECHA",
+        "descripcion": "Puerta trasera derecha",
+        "coords": "282,86,340,85,366,47,367,40,274,37"
+    },
+    {
+        "codigo": "LATERAL_TRASERO_IZQUIERDO",
+        "descripcion": "Lateral trasero izquierdo",
+        "coords": "336,205,355,210,426,225,436,220,488,218,474,242,422,252,368,253,362,239"
+    },
+    {
+        "codigo": "LATERAL_TRASERO_DERECHO",
+        "descripcion": "Lateral trasero derecho",
+        "coords": "341,84,354,82,424,65,437,71,485,75,474,53,434,44,370,40"
+    },
+    {
+        "codigo": "PARTE_TRASERA",
+        "descripcion": "Parte trasera",
+        "coords": "485,73,477,54,438,42,470,45,487,55,493,68,497,106,497,177,494,215,489,232,479,241,462,245,479,232,484,217,439,220,444,195,445,161,445,125,443,94,437,72"
+    },
+    {
+        "codigo": "TECHO",
+        "descripcion": "Techo",
+        "coords": "224,78,214,147,222,216,283,208,336,206,356,209,360,140,355,82,338,86,286,86"
+    },
+    {
+        "codigo": "PARABRISAS",
+        "descripcion": "Parabrisas",
+        "coords": "154,54,186,60,222,75,215,122,217,175,222,218,183,232,153,238,139,208,130,166,132,111,142,75"
+    },
+    {
+        "codigo": "LUNETA",
+        "descripcion": "Luneta trasera",
+        "coords": "356,81,417,67,431,71,441,86,444,134,443,186,437,215,425,225,355,209"
     }
 ]

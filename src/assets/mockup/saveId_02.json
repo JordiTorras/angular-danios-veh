@@ -1,0 +1,106 @@
+{
+    "codModeloDanyos": "CAMION",
+    "lstSeccionesDanyadas": [
+        {
+            "codigo": "PARTE_FRONTAL",
+            "orden": 1,
+            "descripcion": "Parte frontal",
+            "classificacion": "DANIO_PARCIAL",
+            "boolGravedadDanyo": true,
+            "seleccionado": true,
+            "nivelDanyos": 3
+        },
+        {
+            "codigo": "CAPOT",
+            "orden": 2,
+            "descripcion": "Capot",
+            "classificacion": "DANIO_PARCIAL",
+            "boolGravedadDanyo": true,
+            "seleccionado": true,
+            "nivelDanyos": 3
+        },
+        {
+            "codigo": "PUERTA_DELANTERA_IZQUIERDA",
+            "orden": 5,
+            "descripcion": "Puerta Delantera izquierda",
+            "classificacion": "DANIO_PARCIAL",
+            "boolGravedadDanyo": true,
+            "seleccionado": true,
+            "nivelDanyos": 3
+        },
+        {
+            "codigo": "PUERTA_DELANTERA_DERECHA",
+            "orden": 6,
+            "descripcion": "Puerta Delantera Derecha",
+            "classificacion": "DANIO_PARCIAL",
+            "boolGravedadDanyo": true,
+            "seleccionado": false,
+            "nivelDanyos": 0
+        },
+        {
+            "codigo": "TECHO",
+            "orden": 12,
+            "descripcion": "Techo",
+            "classificacion": "DANIO_PARCIAL",
+            "boolGravedadDanyo": true,
+            "seleccionado": false,
+            "nivelDanyos": 0
+        },
+        {
+            "codigo": "CAJA",
+            "orden": 13,
+            "descripcion": "Caja",
+            "classificacion": "DANIO_PARCIAL",
+            "boolGravedadDanyo": true,
+            "seleccionado": false,
+            "nivelDanyos": 0
+        },
+        {
+            "codigo": "PARABRISAS",
+            "orden": 100,
+            "descripcion": "Parabrisas",
+            "classificacion": "DANIO_MENOR",
+            "boolGravedadDanyo": false,
+            "seleccionado": true,
+            "nivelDanyos": 0
+        },
+        {
+            "codigo": "RUEDA_DE_POSICION",
+            "orden": 200,
+            "descripcion": "Rueda de Posición",
+            "classificacion": "DANIO_MENOR",
+            "boolGravedadDanyo": false,
+            "seleccionado": false,
+            "nivelDanyos": 0
+        },
+        {
+            "codigo": "RUEDA_DE_AUXILIO",
+            "orden": 201,
+            "descripcion": "Rueda de Auxilio",
+            "classificacion": "DANIO_MENOR",
+            "boolGravedadDanyo": false,
+            "seleccionado": false,
+            "nivelDanyos": 0
+        },
+        {
+            "codigo": "BATERIA",
+            "orden": 204,
+            "descripcion": "Bateria",
+            "classificacion": "DANIO_MENOR",
+            "boolGravedadDanyo": false,
+            "seleccionado": false,
+            "nivelDanyos": 0
+        },
+        {
+            "codigo": "OTRAS AUTOPARTES",
+            "orden": 207,
+            "descripcion": "Otras Autopartes / Accesorios",
+            "classificacion": "DANIO_MENOR",
+            "boolGravedadDanyo": false,
+            "seleccionado": false,
+            "nivelDanyos": 0
+        }
+    ],
+    "desDanyosLibre": "",
+    "codCaracterParticipacion": ""
+}

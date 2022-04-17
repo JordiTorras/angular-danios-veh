@@ -1,6 +1,16 @@
-<!-- <app-ita-danyos-vehiculo-grafico [tipoVehiculo]="'AUTO'">
-</app-ita-danyos-vehiculo-grafico>
- -->
-<app-ita-danyos-vehiculo [tipoVehiculo]="'AUTO'"> </app-ita-danyos-vehiculo>
+<h3>DEN003</h3>
+
+<div>
+  <select [(ngModel)]="tipoVehiculo">
+    <option value="" selected>Seleccionar</option>
+    <option value="COCHE">Coche</option>
+    <option value="TAXI">Taxi</option>
+    <option value="CAMION">Camión</option>
+  </select>
+</div>
+<hr />
+
+<app-ita-danyos-vehiculo [tipoVehiculo]="tipoVehiculo">
+</app-ita-danyos-vehiculo>
 
 <router-outlet></router-outlet>

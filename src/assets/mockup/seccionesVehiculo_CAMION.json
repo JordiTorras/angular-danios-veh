@@ -1,0 +1,82 @@
+{
+    "codigoModeloVehiculo": "CAMION",
+    "secciones": [
+        {
+            "codigo": "PARTE_FRONTAL",
+            "orden": 1,
+            "descripcion": "Parte frontal",
+            "classificacion": "DANIO_PARCIAL",
+            "boolGravedadDanyo": true
+        },
+        {
+            "codigo": "CAPOT",
+            "orden": 2,
+            "descripcion": "Capot",
+            "classificacion": "DANIO_PARCIAL",
+            "boolGravedadDanyo": true
+        },
+        {
+            "codigo": "PARABRISAS",
+            "orden": 100,
+            "descripcion": "Parabrisas",
+            "classificacion": "DANIO_MENOR",
+            "boolGravedadDanyo": false
+        },
+        {
+            "codigo": "PUERTA_DELANTERA_IZQUIERDA",
+            "orden": 5,
+            "descripcion": "Puerta Delantera izquierda",
+            "classificacion": "DANIO_PARCIAL",
+            "boolGravedadDanyo": true
+        },
+        {
+            "codigo": "PUERTA_DELANTERA_DERECHA",
+            "orden": 6,
+            "descripcion": "Puerta Delantera Derecha",
+            "classificacion": "DANIO_PARCIAL",
+            "boolGravedadDanyo": true
+        },
+        {
+            "codigo": "CAJA",
+            "orden": 13,
+            "descripcion": "Caja",
+            "classificacion": "DANIO_PARCIAL",
+            "boolGravedadDanyo": true
+        },
+        {
+            "codigo": "TECHO",
+            "orden": 12,
+            "descripcion": "Techo",
+            "classificacion": "DANIO_PARCIAL",
+            "boolGravedadDanyo": true
+        },
+        {
+            "codigo": "RUEDA_DE_POSICION",
+            "orden": 200,
+            "descripcion": "Rueda de Posición",
+            "classificacion": "DANIO_MENOR",
+            "boolGravedadDanyo": false
+        },
+        {
+            "codigo": "RUEDA_DE_AUXILIO",
+            "orden": 201,
+            "descripcion": "Rueda de Auxilio",
+            "classificacion": "DANIO_MENOR",
+            "boolGravedadDanyo": false
+        },
+        {
+            "codigo": "BATERIA",
+            "orden": 204,
+            "descripcion": "Bateria",
+            "classificacion": "DANIO_MENOR",
+            "boolGravedadDanyo": false
+        },
+        {
+            "codigo": "OTRAS AUTOPARTES",
+            "orden": 207,
+            "descripcion": "Otras Autopartes / Accesorios",
+            "classificacion": "DANIO_MENOR",
+            "boolGravedadDanyo": false
+        }
+    ]
+}

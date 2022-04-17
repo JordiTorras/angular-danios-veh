@@ -22,21 +22,21 @@
 
 /* Daños medios */
 .mapdiv .danyos2 {
-    fill: rgba(255, 140, 0, 0.5);
+    fill: rgba(255, 140, 0, 0.6);
     stroke: rgba(255, 140, 0, 0.75);
     stroke-width: 3px;
 }
 
 /* Daños graves */
 .mapdiv .danyos3 {
-    fill: rgba(255, 0, 0, 0.5);
+    fill: rgba(255, 0, 0, 0.6);
     stroke: rgba(255, 0, 0, 0.75);
     stroke-width: 3px;
 }
 
 /* Daños menores */
 .mapdiv .danyos99 {
-    fill: rgba(149, 255, 0, 0.5);
+    fill: rgba(149, 255, 0, 0.6);
     stroke: rgba(149, 255, 0, 0.75);
     stroke-width: 3px;
 }

@@ -1,3 +1,4 @@
+import { PropertyRead, ThisReceiver } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
 import { detValorResponse } from './class/detValores';
 import {
@@ -7,6 +8,10 @@ import {
   ParteVehiculo,
 } from './class/seccionesVehiculo';
 import { DanyosVehiculoService } from './services/danyos-vehiculo.service';
+
+/**
+ * TODO esto debe ir en un properties o donde corresponda
+ */
 
 @Component({
   selector: 'app-ita-danyos-vehiculo',
@@ -22,13 +27,39 @@ export class ItaDanyosVehiculoComponent implements OnInit {
   public VF14: detValorResponse[] = []; // Nivel de daños sufridos en la secció del vehículo
   public VF15: detValorResponse[] = []; // Caracter de participación del vehículo en el siniestro
 
-  // URL donde guardamos las imagenes de los diferentes tipos de vehículos, se sustituye MODELO por el codigo de vehículo
-  urlImagen: string = 'assets/images/vehiculo_MODELO.png';
+  // TODO URL donde guardamos las imagenes de los diferentes tipos de vehículos, se sustituye MODELO por el codigo de vehículo
+  urlBaseImagen: string = 'assets/images/vehiculo_MODELO.png';
+  urlImagen: string = '';
 
   constructor(private _danyosService: DanyosVehiculoService) {}
 
   ngOnInit(): void {
-    // Recuperamos la lista de secciones del vehúculo en función del tipo de siniestro
+    // Recuperammos el catalogo de Niveles de daño del vehículo
+    this._danyosService
+      .getDetValores('14')
+      .subscribe((resp: detValorResponse[]) => {
+        this.VF14 = resp;
+      });
+
+    // Recuperamos el catalogo del Caracter de participación en el siniestro
+
+    this._danyosService
+      .getDetValores('15')
+      .subscribe((resp: detValorResponse[]) => {
+        this.VF15 = resp;
+      });
+  }
+
+  ngOnChanges(): void {
+    this.cargarListaSeccionesDanyos(this.tipoVehiculo);
+  }
+
+  cargarListaSeccionesDanyos(tipoVehiculo: string) {
+    if (tipoVehiculo == '') return;
+
+    this.danyosVehiculo = {} as DanyosVehiculo;
+
+    // Recuperamos la lista de secciones del vehículo en función del tipo de siniestro
     this._danyosService
       .getListaSecciones(this.tipoVehiculo)
       .subscribe((resp: SeccionesVehiculoResponse) => {
@@ -36,7 +67,7 @@ export class ItaDanyosVehiculoComponent implements OnInit {
          * Inicializamos el objeto de trabajo this.danyosVehiculo con la lista de secciones del vehículo
          * Las secciones se inicializan por defecto sin seleccionar y se ordenan.
          */
-        this.danyosVehiculo.codModeloDanyos = resp.codigoListaSecciones;
+        this.danyosVehiculo.codModeloDanyos = resp.codigoModeloVehiculo;
 
         this.danyosVehiculo.lstSeccionesDanyadas = resp.secciones.map(
           (seccion) => {
@@ -56,12 +87,26 @@ export class ItaDanyosVehiculoComponent implements OnInit {
 
         this.danyosVehiculo.desDanyosLibre = '';
         this.danyosVehiculo.codCaracterParticipacion = '';
-      });
 
-    this.urlImagen = this.urlImagen.replace('MODELO', this.tipoVehiculo);
+        /**
+         * Despues de cargar la lista de secciones, cargamos la imagen del vehiculo
+         * correpondiente al modelo de daños
+         */
+        this.cargarListaMapaVehiculo(this.danyosVehiculo.codModeloDanyos);
+      });
+  }
+
+  cargarListaMapaVehiculo(codModeloDanyos: string) {
+    if (codModeloDanyos == '') return;
+    // Inicializamos las lista de trabajo
+    this.lstMapVehiculo = [];
+
+    // Copiamos la url Base y sustituimos MODELO por el codigo correspondiente
+    this.urlImagen = this.urlBaseImagen;
+    this.urlImagen = this.urlImagen.replace('MODELO', codModeloDanyos);
 
     this._danyosService
-      .getListaSeccionesImagen(this.tipoVehiculo)
+      .getListaSeccionesImagen(codModeloDanyos)
       .subscribe((resp: ParteVehiculo[]) => {
         this.lstMapVehiculo = resp.map((parte: ParteVehiculo) => {
           return {
@@ -69,21 +114,6 @@ export class ItaDanyosVehiculoComponent implements OnInit {
             nivelDanyos: 0,
           };
         });
-        console.log(this.lstMapVehiculo);
-      });
-
-    // Recuperammos el catalogo de Niveles de daño del vehículo
-    this._danyosService
-      .getDetValores('14')
-      .subscribe((resp: detValorResponse[]) => {
-        this.VF14 = resp;
-      });
-
-    // Recuperamos el catalogo del Caracter de participación en el siniestro
-    this._danyosService
-      .getDetValores('15')
-      .subscribe((resp: detValorResponse[]) => {
-        this.VF15 = resp;
       });
   }
 
@@ -117,8 +147,10 @@ export class ItaDanyosVehiculoComponent implements OnInit {
   }
 
   onChangeCheck(event: Event): void {
-    // obtenemos el CODIGO de la sección a partir de id del elemento HTML, los id tienen esta estructura sel-CODIGO
-    // Transformarmos el event.target como elemento INPUT para poder acceder a sus atributos con typescript
+    /**
+     * obtenemos el CODIGO de la sección a partir de id del elemento HTML, los id tienen esta estructura sel-CODIGO
+     * Transformarmos el event.target como elemento INPUT para poder acceder a sus atributos con typescript
+     */
     let codigo: string = (event.target as HTMLInputElement).id.substring(4);
 
     // Buscamos el indice del array de secciones a partir del codigo
@@ -195,6 +227,16 @@ export class ItaDanyosVehiculoComponent implements OnInit {
     }
   }
 
+  /**
+   * Actualizamos el nivel de gravedad de daños de la parte de la imagen
+   * Para que al renderizar, aplique el estilo CSS .danyosN donde N es el nivel de gravedad
+   * @param codigo
+   * @param nivelDanyos
+   * 0 - Sin daños
+   * n - Nivel de daños
+   * 99 - Reservado para cristales (daños menores) que no tienen nivel de graveda
+   * @returns
+   */
   actualizarDibujo(codigo: string, nivelDanyos: number) {
     let index = this.lstMapVehiculo.findIndex((item) => item.codigo === codigo);
 

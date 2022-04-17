@@ -18,10 +18,58 @@ export class DanyosVehiculoService {
   ): Observable<SeccionesVehiculoResponse> {
     /**
      * Recuperamos la lista de las secciones que componen el vehiculo en función de su tipologia
+     * Tipo Vehiculo            Modelo Daños del Vehiculo
+     * --------------           ----------------------------
+     **  Auto               -->         AUTO
+     **  Servicio Especial  -->         AUTO
+     **  Servicio Publico   -->
+     *   Jeeps hasta 4 Cilindros
+     *   Trailer
+     *   Pick Up Clase "A"
+     *   Jeeps de mas de 4 Cilindros
+     *   Pick Up Clase "B"
+     **  Camion             -->         CAMION
+     *   Semi-Remolque
+     *   Acoplado
+     *   Tractor Rural
+     *   Maquina Rural
+     *   Acoplado Rural
+     *   Tractor(Excluido Rural)
+     *   Casa Rodante
+     *   Bantam
+     *   Motocicleta
+     *   Motoneta
+     *   Bicicleta con Motor
+     *   Chassis
+     *   Implemento Trabajo Rural
+     *   Semi-Traccion
+     **   Otros              -->         AUTO
      *
      * TODO implementar el servicio
      */
-    const httpUrl = 'assets/mockup/seccionesVehiculo_' + tipoVehiculo + '.json';
+
+    let modeloDanios: string = '';
+
+    switch (tipoVehiculo) {
+      case 'COCHE': {
+        modeloDanios = 'AUTO';
+        break;
+      }
+      case 'TAXI': {
+        modeloDanios = 'AUTO';
+        break;
+      }
+      case 'CAMION': {
+        modeloDanios = 'CAMION';
+        break;
+      }
+      default: {
+        modeloDanios = 'AUTO';
+        break;
+      }
+    }
+
+    const httpUrl = 'assets/mockup/seccionesVehiculo_' + modeloDanios + '.json';
     const httpOptions = {
       headers: new HttpHeaders(),
       params: new HttpParams(),
@@ -43,8 +91,10 @@ export class DanyosVehiculoService {
     return this._http.get<detValorResponse[]>(httpUrl, httpOptions);
   }
 
-  getListaSeccionesImagen(tipoVehiculo: string): Observable<ParteVehiculo[]> {
-    const httpUrl = 'assets/images/vehiculo_' + tipoVehiculo + '.json';
+  getListaSeccionesImagen(
+    codModeloDanyos: string
+  ): Observable<ParteVehiculo[]> {
+    const httpUrl = 'assets/images/vehiculo_' + codModeloDanyos + '.json';
     const httpOptions = {
       headers: new HttpHeaders(),
       params: new HttpParams(),

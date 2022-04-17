@@ -1,5 +1,5 @@
 export interface SeccionesVehiculoResponse {
-  codigoListaSecciones: string;
+  codigoModeloVehiculo: string;
   secciones: SeccionVehiculo[];
 }
 

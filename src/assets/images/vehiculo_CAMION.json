@@ -1,0 +1,37 @@
+[
+    {
+        "codigo": "PARTE_FRONTAL",
+        "descripcion": "Parte frontal",
+        "coords": "24,69,23,227,11,217,10,201,5,195,5,99,10,94,12,77"
+    },
+    {
+        "codigo": "CAPOT",
+        "descripcion": "Capot",
+        "coords": "24,67,94,67,93,75,86,73,74,92,70,125,69,159,73,198,81,219,88,220,88,229,24,228"
+    },
+    {
+        "codigo": "PUERTA_DELANTERA_IZQUIERDA",
+        "descripcion": "Puerta delantera izquierda",
+        "coords": "128,209,188,209,187,229,87,229,88,221"
+    },
+    {
+        "codigo": "PUERTA_DELANTERA_DERECHA",
+        "descripcion": "Puerta delantera derecha",
+        "coords": "187,88,129,88,89,75,93,67,186,68"
+    },
+    {
+        "codigo": "TECHO",
+        "descripcion": "Techo",
+        "coords": "131,88,186,88,186,209,130,209,127,169,126,126"
+    },
+    {
+        "codigo": "PARABRISAS",
+        "descripcion": "Parabrisas",
+        "coords": "130,90,126,125,126,165,131,209,87,223,80,220,69,164,71,113,74,92,85,74"
+    },
+    {
+        "codigo": "CAJA",
+        "descripcion": "Caja",
+        "coords": "186,58,187,236,491,236,492,58"
+    }
+]
