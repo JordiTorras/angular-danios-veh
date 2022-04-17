@@ -7,14 +7,9 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ItaDanyosVehiculoComponent } from './component/ita-danyos-vehiculo/ita-danyos-vehiculo.component';
-import { ItaDanyosVehiculoGraficoComponent } from './component/ita-danyos-vehiculo-grafico/ita-danyos-vehiculo-grafico.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ItaDanyosVehiculoComponent,
-    ItaDanyosVehiculoGraficoComponent,
-  ],
+  declarations: [AppComponent, ItaDanyosVehiculoComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

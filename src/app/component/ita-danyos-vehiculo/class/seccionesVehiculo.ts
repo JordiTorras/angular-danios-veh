@@ -1,3 +1,8 @@
+export interface SeccionesVehiculoResponse {
+  codigoListaSecciones: string;
+  secciones: SeccionVehiculo[];
+}
+
 export interface SeccionVehiculo {
   codigo: string;
   orden: number;
@@ -5,12 +10,7 @@ export interface SeccionVehiculo {
   classificacion: string;
   boolGravedadDanyo: boolean;
   seleccionado: boolean;
-  nivelDanyos: number | null;
-}
-
-export interface SeccionesVehiculoResponse {
-  codigoListaSecciones: string;
-  secciones: SeccionVehiculo[];
+  nivelDanyos: number | 0;
 }
 
 export interface DanyosVehiculo {
@@ -18,4 +18,15 @@ export interface DanyosVehiculo {
   lstSeccionesDanyadas: SeccionVehiculo[];
   codCaracterParticipacion: string | null;
   desDanyosLibre: string | null;
+}
+
+export interface ParteVehiculo {
+  codigo: string;
+  descripcion: string;
+  coords: string;
+  nivelDanyos?: number;
+}
+
+export interface PartesVehiculoResponse {
+  partesVehiculo: ParteVehiculo[];
 }

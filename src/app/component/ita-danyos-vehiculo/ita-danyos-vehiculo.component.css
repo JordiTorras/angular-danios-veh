@@ -1,3 +1,47 @@
 .tresColumnas {
     columns: 3 auto;
 }
+
+.mapdiv {
+    width: 500px;
+    height: 300px;
+}
+
+.mapdiv path {
+    /* hacemos la secciones transparentes */
+    fill: rgba(0, 0, 0, 0);
+
+}
+
+/* Daños leves */
+.mapdiv .danyos1 {
+    fill: rgba(255, 217, 0, 0.5);
+    stroke: rgba(255, 217, 0, 0.75);
+    stroke-width: 3px;
+}
+
+/* Daños medios */
+.mapdiv .danyos2 {
+    fill: rgba(255, 140, 0, 0.5);
+    stroke: rgba(255, 140, 0, 0.75);
+    stroke-width: 3px;
+}
+
+/* Daños graves */
+.mapdiv .danyos3 {
+    fill: rgba(255, 0, 0, 0.5);
+    stroke: rgba(255, 0, 0, 0.75);
+    stroke-width: 3px;
+}
+
+/* Daños menores */
+.mapdiv .danyos99 {
+    fill: rgba(149, 255, 0, 0.5);
+    stroke: rgba(149, 255, 0, 0.75);
+    stroke-width: 3px;
+}
+
+
+.mapdiv a :hover {
+    fill:rgba(0, 255, 0, 0.45);
+}

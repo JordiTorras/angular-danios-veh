@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { SeccionesVehiculoResponse } from '../class/seccionesVehiculo';
+import {
+  ParteVehiculo,
+  SeccionesVehiculoResponse,
+} from '../class/seccionesVehiculo';
 import { Observable } from 'rxjs';
 import { detValorResponse } from '../class/detValores';
 
@@ -38,5 +41,15 @@ export class DanyosVehiculoService {
     };
 
     return this._http.get<detValorResponse[]>(httpUrl, httpOptions);
+  }
+
+  getListaSeccionesImagen(tipoVehiculo: string): Observable<ParteVehiculo[]> {
+    const httpUrl = 'assets/images/vehiculo_' + tipoVehiculo + '.json';
+    const httpOptions = {
+      headers: new HttpHeaders(),
+      params: new HttpParams(),
+    };
+
+    return this._http.get<ParteVehiculo[]>(httpUrl, httpOptions);
   }
 }

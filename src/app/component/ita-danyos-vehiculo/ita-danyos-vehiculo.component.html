@@ -1,3 +1,21 @@
+<!-- Imagen del vehiculo -->
+<div class="mapdiv" style="background-image: url('{{ urlImagen }}')">
+  <svg width="500" height="300">
+    <a
+      *ngFor="let item of lstMapVehiculo"
+      [attr.xlink:title]="item.descripcion"
+      xlink:href="#"
+    >
+      <path
+        id="path-{{ item.codigo }}"
+        [attr.d]="'M' + item.coords + 'Z'"
+        (click)="onClickSeccion($event)"
+        [ngClass]="'danyos' + item.nivelDanyos"
+      ></path>
+    </a>
+  </svg>
+</div>
+
 <!-- Lista de secciones dañadas -->
 
 <div class="tresColumnas">
@@ -21,8 +39,9 @@
         <label
           ><input
             type="checkbox"
-            id="check-{{ item.codigo }}"
+            id="sel-{{ item.codigo }}"
             [(ngModel)]="item.seleccionado"
+            (change)="onChangeCheck($event)"
           />
           {{ item.descripcion }}</label
         >
