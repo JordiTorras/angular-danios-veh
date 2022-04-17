@@ -1,16 +1,28 @@
 <h3>DEN003</h3>
 
 <div>
-  <select [(ngModel)]="tipoVehiculo">
-    <option value="" selected>Seleccionar</option>
-    <option value="COCHE">Coche</option>
-    <option value="TAXI">Taxi</option>
-    <option value="CAMION">Camión</option>
-  </select>
+  <p>
+    Tipo de vehículo :
+    <select [(ngModel)]="tipoVehiculo">
+      <option value="" selected>Seleccionar</option>
+      <option value="COCHE">Coche</option>
+      <option value="TAXI">Taxi</option>
+      <option value="CAMION">Camión</option>
+    </select>
+  </p>
+
+  <p>
+    Cargar datos :
+    <select [(ngModel)]="idDanyos">
+      <option value="null" selected>Seleccionar</option>
+      <option value="1">Cargar daños coche</option>
+      <option value="2">Cargar daños camión</option>
+    </select>
+  </p>
 </div>
 <hr />
 
-<app-ita-danyos-vehiculo [tipoVehiculo]="tipoVehiculo">
+<app-ita-danyos-vehiculo [tipoVehiculo]="tipoVehiculo" [idDanyos]="idDanyos">
 </app-ita-danyos-vehiculo>
 
 <router-outlet></router-outlet>

@@ -25,14 +25,14 @@
 <!-- Lista de secciones dañadas -->
 
 <div class="tresColumnas">
-  <div *ngFor="let item of danyosVehiculo.lstSeccionesDanyadas">
-    <span [ngSwitch]="item.boolGravedadDanyo">
+  <div *ngFor="let item of danyosVehiculo.damageSections">
+    <span [ngSwitch]="item.boolSeverityDamage">
       <!-- Lista par seleccionar el nivel de daño de la sección -->
       <div *ngSwitchCase="true">
-        {{ item.descripcion }} <br />
+        {{ item.description }} <br />
         <select
-          id="sel-{{ item.codigo }}"
-          [(ngModel)]="item.nivelDanyos"
+          id="sel-{{ item.code }}"
+          [(ngModel)]="item.damageLevel"
           (change)="onChangeNivelDanyos($event)"
         >
           <option *ngFor="let item of VF14" [value]="item.codigo">
@@ -45,11 +45,11 @@
         <label
           ><input
             type="checkbox"
-            id="sel-{{ item.codigo }}"
-            [(ngModel)]="item.seleccionado"
+            id="sel-{{ item.code }}"
+            [(ngModel)]="item.selected"
             (change)="onChangeCheck($event)"
           />
-          {{ item.descripcion }}</label
+          {{ item.description }}</label
         >
       </div>
     </span>
@@ -64,7 +64,7 @@
   >
   <select
     id="sel-caracter-participacion"
-    [(ngModel)]="danyosVehiculo.codCaracterParticipacion"
+    [(ngModel)]="danyosVehiculo.characterParticipation"
   >
     <option disabled value="">Seleccionar</option>
     <option *ngFor="let item of VF15" [value]="item.codigo">
@@ -73,7 +73,7 @@
   </select>
 </div>
 <div>
-  <input [(ngModel)]="danyosVehiculo.desDanyosLibre" />
+  <input [(ngModel)]="danyosVehiculo.damageDescription" />
 </div>
 
 <!-- Contro de los datos introducidos-->

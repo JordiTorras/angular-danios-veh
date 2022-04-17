@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import {
   ParteVehiculo,
-  SeccionesVehiculoResponse,
+  SectionsVehicleResponse,
 } from '../class/seccionesVehiculo';
 import { Observable } from 'rxjs';
 import { detValorResponse } from '../class/detValores';
@@ -13,9 +13,7 @@ import { detValorResponse } from '../class/detValores';
 export class DanyosVehiculoService {
   constructor(private _http: HttpClient) {}
 
-  getListaSecciones(
-    tipoVehiculo: string
-  ): Observable<SeccionesVehiculoResponse> {
+  getListaSecciones(tipoVehiculo: string): Observable<SectionsVehicleResponse> {
     /**
      * Recuperamos la lista de las secciones que componen el vehiculo en función de su tipologia
      * Tipo Vehiculo            Modelo Daños del Vehiculo
@@ -75,7 +73,7 @@ export class DanyosVehiculoService {
       params: new HttpParams(),
     };
 
-    return this._http.get<SeccionesVehiculoResponse>(httpUrl, httpOptions);
+    return this._http.get<SectionsVehicleResponse>(httpUrl, httpOptions);
   }
 
   /**
@@ -101,5 +99,15 @@ export class DanyosVehiculoService {
     };
 
     return this._http.get<ParteVehiculo[]>(httpUrl, httpOptions);
+  }
+
+  getSeccionesDanyadas(id: number): Observable<SectionsVehicleResponse> {
+    const httpUrl = 'assets/mockup/saveId_' + id + '.json';
+    const httpOptions = {
+      headers: new HttpHeaders(),
+      params: new HttpParams(),
+    };
+
+    return this._http.get<SectionsVehicleResponse>(httpUrl, httpOptions);
   }
 }

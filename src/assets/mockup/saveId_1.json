@@ -1,4 +1,5 @@
 {
+    "idVehicleDamaged": 1,
     "codDamageModel": "AUTO",
     "damageSections": [
         {
@@ -6,224 +7,290 @@
             "order": 1,
             "description": "Parte frontal",
             "type": "DANIO_PARCIAL",
-            "boolSeverityDamage": true
+            "boolSeverityDamage": true,
+            "selected": true,
+            "damageLevel": 1
         },
         {
             "code": "CAPOT",
             "order": 2,
             "description": "Capot",
             "type": "DANIO_PARCIAL",
-            "boolSeverityDamage": true
+            "boolSeverityDamage": true,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "LATERAL_DELANTERO_IZQUIERDO",
             "order": 3,
             "description": "Lateral Delantero Izquierdo",
             "type": "DANIO_PARCIAL",
-            "boolSeverityDamage": true
-        },
-        {
-            "code": "PARABRISAS",
-            "order": 100,
-            "description": "Parabrisas",
-            "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
-        },
-        {
-            "code": "LUNETA",
-            "order": 111,
-            "description": "Luneta",
-            "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": true,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "LATERAL_DELANTERO_DERECHO",
             "order": 4,
             "description": "Lateral Delantero Derecho",
             "type": "DANIO_PARCIAL",
-            "boolSeverityDamage": true
+            "boolSeverityDamage": true,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "PUERTA_DELANTERA_IZQUIERDA",
             "order": 5,
             "description": "Puerta Delantera izquierda",
             "type": "DANIO_PARCIAL",
-            "boolSeverityDamage": true
+            "boolSeverityDamage": true,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "PUERTA_DELANTERA_DERECHA",
             "order": 6,
             "description": "Puerta Delantera Derecha",
             "type": "DANIO_PARCIAL",
-            "boolSeverityDamage": true
+            "boolSeverityDamage": true,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "PUERTA_TRASERA_IZQUIERDA",
             "order": 7,
             "description": "Puerta Trasera Izquierda",
             "type": "DANIO_PARCIAL",
-            "boolSeverityDamage": true
+            "boolSeverityDamage": true,
+            "selected": true,
+            "damageLevel": 2
         },
         {
             "code": "PUERTA_TRASERA_DERECHA",
             "order": 8,
             "description": "Puerta Trasera Derecha",
             "type": "DANIO_PARCIAL",
-            "boolSeverityDamage": true
+            "boolSeverityDamage": true,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "LATERAL_TRASERO_IZQUIERDO",
             "order": 9,
             "description": "Lateral Trasero Izquierdo",
             "type": "DANIO_PARCIAL",
-            "boolSeverityDamage": true
+            "boolSeverityDamage": true,
+            "selected": true,
+            "damageLevel": 3
         },
         {
             "code": "LATERAL_TRASERO_DERECHO",
             "order": 10,
             "description": "Lateral Trasero Derecho",
             "type": "DANIO_PARCIAL",
-            "boolSeverityDamage": true
+            "boolSeverityDamage": true,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "PARTE_TRASERA",
             "order": 11,
             "description": "Parte Trasera",
             "type": "DANIO_PARCIAL",
-            "boolSeverityDamage": true
+            "boolSeverityDamage": true,
+            "selected": true,
+            "damageLevel": 3
         },
         {
             "code": "TECHO",
             "order": 12,
             "description": "Techo",
             "type": "DANIO_PARCIAL",
-            "boolSeverityDamage": true
+            "boolSeverityDamage": true,
+            "selected": false,
+            "damageLevel": 0
+        },
+        {
+            "code": "PARABRISAS",
+            "order": 100,
+            "description": "Parabrisas",
+            "type": "DANIO_MENOR",
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "ALETA_DELANTERA_IZQUIERDA",
             "order": 101,
             "description": "Aleta Delantera Izquierda",
             "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "ALETA_DELANTERA_DERECHA",
             "order": 102,
             "description": "Aleta Delantera Derecha",
             "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "CRISTAL_PUERTA_DELANTERA_IZQUIERDA",
             "order": 103,
             "description": "Cristal Puerta Delantera Izquierda",
             "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "CRISTAL_PUERTA_DELANTERA_DERECHA",
             "order": 104,
             "description": "Cristal Puerta Delantera Derecha",
             "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "CRISTAL_PUERTA_TRASERA_IZQUIERDA",
             "order": 105,
             "description": "Cristal Puerta Trasera Izquierda",
             "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "CRISTAL_PUERTA_TRASERA_DERECHA",
             "order": 106,
             "description": "Cristal Puerta Trasera Derecha",
             "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "CUSTODIA_IZQUIERDA",
             "order": 107,
             "description": "Custodia Izquierda",
             "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "CUSTODIA_DERECHA",
             "order": 108,
             "description": "Custodia Derecha",
             "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "ALETA_TRASERA_IZQUIERDA",
             "order": 109,
             "description": "Aleta Trasera Izquierda",
             "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "ALETA_TRASERA_DERECHA",
             "order": 110,
             "description": "Aleta Trasera Derecha",
             "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
+        },
+        {
+            "code": "LUNETA",
+            "order": 111,
+            "description": "Luneta",
+            "type": "DANIO_MENOR",
+            "boolSeverityDamage": false,
+            "selected": true,
+            "damageLevel": 0
         },
         {
             "code": "RUEDA_DE_POSICION",
             "order": 200,
             "description": "Rueda de Posición",
             "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "RUEDA_DE_AUXILIO",
             "order": 201,
             "description": "Rueda de Auxilio",
             "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "CRIQUE",
             "order": 202,
             "description": "Crique",
             "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "LLAVE_DE_RUEDAS",
             "order": 203,
             "description": "Llave de ruedas",
             "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "BATERIA",
             "order": 204,
             "description": "Bateria",
             "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "CERRADURAS",
             "order": 205,
             "description": "Cerraduras / Tambor de Arranque",
             "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "LLAVE_DE_IGNICION",
             "order": 206,
             "description": "Llave de Ignición",
             "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
         },
         {
             "code": "OTRAS AUTOPARTES",
             "order": 207,
             "description": "Otras Autopartes / Accesorios",
             "type": "DANIO_MENOR",
-            "boolSeverityDamage": false
+            "boolSeverityDamage": false,
+            "selected": false,
+            "damageLevel": 0
         }
-    ]
+    ],
+    "damageDescription": "Golpeado estado parado en un semáforo",
+    "characterParticipation": "1"
 }

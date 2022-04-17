@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-danios-veh';
 
-  public tipoVehiculo: string = '';
+  tipoVehiculo: string = '';
+  idDanyos: number | null = null;
 }
